@@ -1,0 +1,140 @@
+library IEEE;
+
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use WORK.util.all;
+
+entity mux is
+
+    generic
+    (
+        gate_delay: time     := 0 ns;
+        ts_digits:  positive
+    );
+
+    port
+    (
+        rst:  in  std_logic                                  :=            '0';           -- reset
+        clk:  in  std_logic                                  :=            '0';           -- clock
+
+				-- a is msf
+        awi:  in  std_logic                                  :=            '0';           -- A write in
+        atsi: in  bcd_digit_vector((ts_digits - 1) downto 0) := (others => bcd_unknown);  -- A timestamp in
+        albi: in  bcd_digit_vector( 1 downto 0)              := (others => bcd_unknown);  -- A last received bit in
+        atci: in  bcd_digit_vector(13 downto 0)              := (others => bcd_unknown);  -- A timestamp YYYY-MM-DD HH:MM:SS in
+        aidi: in  byte_vector(0 to 2)                        := (others => byte_unknown); -- A ID in
+        afi:  out std_logic                                  :=            '0';           -- A buffer full
+
+				-- b is dcf
+        bwi:  in  std_logic                                  :=            '0';           -- B write in
+        btsi: in  bcd_digit_vector((ts_digits - 1) downto 0) := (others => bcd_unknown);  -- B timestamp in
+        blbi: in  bcd_digit_vector( 1 downto 0)              := (others => bcd_unknown);  -- B last received bit in
+        btci: in  bcd_digit_vector(13 downto 0)              := (others => bcd_unknown);  -- B timestamp YYYY-MM-DD HH:MM:SS in
+        bidi: in  byte_vector(0 to 2)                        := (others => byte_unknown); -- B ID in
+        bfi:  out std_logic                                  :=            '0';           -- B buffer full
+
+        wo:   out std_logic                                  :=            '0';           -- write out
+        tso:  out bcd_digit_vector((ts_digits - 1) downto 0) := (others => bcd_zero);     -- timestamp out
+        lbo:  out bcd_digit_vector( 1 downto 0)              := (others => bcd_zero);     -- last received bit out
+        tco:  out bcd_digit_vector(13 downto 0)              := (others => bcd_zero);     -- timestamp YYYY-MM-DD HH:MM:SS out
+        ido:  out byte_vector(0 to 2)                        := (others => byte_unknown); -- ID out
+        bo:   in  std_logic                                  :=            '0'            -- busy out
+    );
+
+end mux;
+
+architecture rtl of mux is
+
+	 --Collection of states for FSM
+    type states is (neutral, writing);
+    
+    --Two signals for state so that it can be clocked
+    signal current_state:		states 																 := neutral;
+    signal next_state:			states 																 := neutral;
+    
+    
+    --If last_signal = 0, the last signal wrote out was mcf, if 1, dcf
+    signal last_signal:				std_logic := '0';
+    signal next_last_signal:	std_logic := '0';
+    
+    signal atci_sampled: bcd_digit_vector(13 downto 0)              := (others => bcd_zero);
+    signal btci_sampled: bcd_digit_vector(13 downto 0)              := (others => bcd_zero);
+    
+    signal albi_sampled: bcd_digit_vector( 1 downto 0)              := (others => bcd_unknown);
+    signal blbi_sampled: bcd_digit_vector( 1 downto 0)              := (others => bcd_unknown);
+    
+    signal atsi_sampled: bcd_digit_vector((ts_digits - 1) downto 0) := (others => bcd_unknown);
+    signal btsi_sampled: bcd_digit_vector((ts_digits - 1) downto 0) := (others => bcd_unknown);
+    
+    signal aidi_sampled: byte_vector(0 to 2)                        := (others => byte_unknown);
+    signal bidi_sampled: byte_vector(0 to 2)                        := (others => byte_unknown);
+
+begin
+
+  process(clk, rst)
+  begin
+  
+  	if (rst = '1') then -- If reset
+  	
+  		last_signal <= '0';
+  		current_state <= neutral;
+  	
+		elsif clk'event and (clk = '1') then	--On clock ri
+		
+			last_signal <= next_last_signal;
+			current_state <= next_state;
+			atci_sampled <= atci;
+			btci_sampled <= btci;
+			albi_sampled <= albi;
+			blbi_sampled <= blbi;
+			atsi_sampled <= atsi;
+			btsi_sampled <= btsi;
+			aidi_sampled <= aidi;
+			bidi_sampled <= bidi;
+  
+  end process;
+  
+  
+  process(current_state)
+  begin
+  
+  	case current_state is
+  	
+  		when neutral =>
+  		
+  			if (awi = '1') or (bwi = '1') then
+  			
+  				next_state <= writing;
+  			
+  			end if;
+  			
+  		when writing =>
+  		
+  			if (last_signal = '0') then --last signal wrote out was msf
+  					
+
+					next_last_signal = '1';
+					
+					tso <= btsi_sampled;
+					lbo <= blbi_sampled;
+					tco <= btci_sampled;
+					ido <= bidi_sampled;
+					
+				else
+				
+					next_last_signal = '0';
+					
+					tso <= atsi_sampled;
+					lbo <= albi_sampled;
+					tco <= atci_sampled;
+					ido <= aidi_sampled;
+					
+					
+					
+  			end if;
+  	
+  	end case;
+  
+  end process;
+
+end rtl;

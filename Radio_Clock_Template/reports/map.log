@@ -1,0 +1,527 @@
+Release 14.1 Map P.15xf (lin)
+Xilinx Mapping Report File for Design 'top_level'
+
+Design Information
+------------------
+Command Line   : map -intstyle silent -detail -p xc6slx16-csg324-3 -pr b -c 100
+-w -o top_level_map.ncd top_level.ngd top_level.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Nov 30 14:55:38 2012
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,330 out of  18,224   18%
+    Number used as Flip Flops:               3,330
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      4,451 out of   9,112   48%
+    Number used as logic:                    4,438 out of   9,112   48%
+      Number using O6 output only:           3,745
+      Number using O5 output only:             177
+      Number using O5 and O6:                  516
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:     13
+      Number with same-slice register load:      5
+      Number with same-slice carry load:         8
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,328 out of   2,278   58%
+  Nummber of MUXCYs used:                      444 out of   4,556    9%
+  Number of LUT Flip Flop pairs used:        4,635
+    Number with an unused Flip Flop:         1,417 out of   4,635   30%
+    Number with an unused LUT:                 184 out of   4,635    3%
+    Number of fully used LUT-FF pairs:       3,034 out of   4,635   65%
+    Number of unique control sets:              52
+    Number of slice register sites lost
+      to control set restrictions:             158 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        38 out of     232   16%
+    Number of LOCed IOBs:                       38 out of      38  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                6.49
+
+Peak Memory Usage:  294 MB
+Total REAL time to MAP completion:  1 mins 9 secs 
+Total CPU time to MAP completion:   1 mins 5 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:43 - No license file was found in the standard Xilinx license
+directory.
+WARNING:Security:44 - Since no license file was found,
+WARNING:Security:42 - Your license support version '2012.12' for ISE expires in
+0 days after which you will not qualify for Xilinx software updates or new
+releases.
+
+Section 3 - Informational
+-------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
+'2100@ee-blackadder:1717@ee-blackadder'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:LIT:243 - Logical network btnu_IBUF has no load.
+INFO:LIT:243 - Logical network btnd_IBUF has no load.
+INFO:LIT:243 - Logical network btnc_IBUF has no load.
+INFO:LIT:243 - Logical network btnl_IBUF has no load.
+INFO:LIT:243 - Logical network btnr_IBUF has no load.
+INFO:LIT:243 - Logical network rx_IBUF has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  12 block(s) optimized away
+ 186 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		dcf_unit/dcf_inst/XST_GND
+VCC 		dcf_unit/dcf_inst/XST_VCC
+GND 		msf_unit/msf_inst/XST_GND
+VCC 		msf_unit/msf_inst/XST_VCC
+LUT3 		mux_uut/Mmux_tco<12>31
+   optimized to 0
+LUT3 		mux_uut/Mmux_tco<13>31
+   optimized to 0
+FDCE 		mux_uut/atci_sampled_12_2
+   optimized to 0
+FDCE 		mux_uut/atci_sampled_13_2
+   optimized to 0
+FDCE 		mux_uut/btci_sampled_12_2
+   optimized to 0
+FDCE 		mux_uut/btci_sampled_13_2
+   optimized to 0
+
+Redundant Block(s):
+TYPE 		BLOCK
+INV 		mux_uut/ido<0><3>1_INV_0
+LUT1 		msf_unit/msf_inst/Mcompar__n0802_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_xor<29>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<1>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<2>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<3>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<5>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<6>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<7>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<8>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<9>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<10>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<11>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<12>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<13>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<14>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<15>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<16>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<17>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<18>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<19>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<20>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<21>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<22>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<23>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<24>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<25>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<26>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<27>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_low[29]_GND_7_o_add_27_OUT_cy<28>_rt
+LUT1 		msf_unit/msf_inst/Mcompar__n0811_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_xor<29>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<1>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<2>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<3>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<5>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<6>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<7>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<8>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<9>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<10>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<11>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<12>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<13>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<14>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<15>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<16>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<17>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<18>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<19>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<20>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<21>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<22>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<23>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<24>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<25>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<26>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<27>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt_high[29]_GND_7_o_add_30_OUT_cy<28>_rt
+LUT1 		msf_unit/msf_inst/Mcompar__n0820_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_xor<29>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<1>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<2>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<3>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<5>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<6>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<7>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<8>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<9>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<10>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<11>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<12>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<13>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<14>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<15>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<16>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<17>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<18>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<19>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<20>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<21>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<22>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<23>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<24>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<25>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<26>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<27>_rt
+LUT1 		msf_unit/msf_inst/Madd_cnt[29]_GND_7_o_add_24_OUT_cy<28>_rt
+LUT1 		msf_unit/msf_inst/Maddsub_n0765_Madd1_cy<4>_rt
+LUT1 		msf_unit/msf_inst/Maddsub_n0765_Madd1_xor<5>_rt
+LUT1 		msf_unit/msf_inst/Mmux_next_error33_cy_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<1>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<2>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<3>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<5>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<6>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<7>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<8>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<9>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<10>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<11>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<12>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<13>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<14>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<15>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<16>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<17>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<18>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<19>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<20>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<21>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<22>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<23>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<24>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<25>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<26>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<27>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_cy<28>_rt
+LUT1 		dcf_unit/dcf_inst/Mcompar__n0612_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_low[29]_GND_7_o_add_20_OUT_xor<29>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<1>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<2>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<3>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<5>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<6>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<7>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<8>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<9>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<10>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<11>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<12>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<13>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<14>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<15>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<16>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<17>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<18>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<19>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<20>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<21>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<22>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<23>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<24>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<25>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<26>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<27>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_cy<28>_rt
+LUT1 		dcf_unit/dcf_inst/Mcompar__n0621_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt_high[29]_GND_7_o_add_23_OUT_xor<29>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<1>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<2>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<3>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<5>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<6>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<7>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<8>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<9>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<10>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<11>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<12>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<13>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<14>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<15>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<16>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<17>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<18>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<19>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<20>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<21>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<22>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<23>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<24>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<25>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<26>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<27>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_cy<28>_rt
+LUT1 		dcf_unit/dcf_inst/Mcompar__n0630_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Madd_cnt[29]_GND_7_o_add_17_OUT_xor<29>_rt
+LUT1 		dcf_unit/dcf_inst/Maddsub_n0580_Madd1_cy<4>_rt
+LUT1 		dcf_unit/dcf_inst/Maddsub_n0580_Madd1_xor<5>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| an<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| btnc                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnd                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnl                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnr                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| btnu                               | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| dcf                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ka<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<4>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<5>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<6>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ka<7>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<0>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<1>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<2>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<3>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<4>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<5>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<6>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| ld<7>                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| msf                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rx                                 | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| tx                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+
+Section 12 - Control Set Information
+------------------------------------
++---------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal | Reset Signal | Set Signal | Enable Signal                                                | Slice Load Count | Bel Load Count |
++---------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_BUFGP    |              |            |                                                              | 2                | 2              |
+| clk_BUFGP    |              |            | dcf_w                                                        | 15               | 60             |
+| clk_BUFGP    |              |            | msf_w                                                        | 15               | 60             |
+| clk_BUFGP    |              |            | mux_uut/rst_inv                                              | 1                | 2              |
+| clk_BUFGP    | ld_0_OBUF    |            |                                                              | 73               | 212            |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0619_inv                                 | 6                | 30             |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0628_inv                                 | 6                | 30             |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0647_inv                                 | 10               | 32             |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0661_inv                                 | 2                | 3              |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0685_inv                                 | 11               | 38             |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0760_inv                                 | 2                | 3              |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0787_inv                                 | 1                | 1              |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/_n0817_inv                                 | 1                | 1              |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_unit/dcf_inst/sec_tick                                   | 4                | 11             |
+| clk_BUFGP    | ld_0_OBUF    |            | dcf_w                                                        | 14               | 54             |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/_n5849_inv                               | 2                | 7              |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/w1_cepot                                 | 37               | 112            |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/w1_cepot1                                | 14               | 48             |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/w1_cepot2                                | 33               | 112            |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/w1_cepot3                                | 4                | 16             |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/wo1                                      | 3                | 4              |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/wpos<0>                                  | 149              | 560            |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/wpos<1>                                  | 185              | 700            |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/wpos<2>                                  | 105              | 420            |
+| clk_BUFGP    | ld_0_OBUF    |            | fifo_unit/fifo_inst/wpos<3>                                  | 75               | 280            |
+| clk_BUFGP    | ld_0_OBUF    |            | ld_2_OBUF                                                    | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/_n0818_inv                                 | 5                | 30             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/_n0835_inv                                 | 19               | 48             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/_n0943_inv1_cepot                          | 8                | 17             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/_n0949_inv                                 | 11               | 37             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/next_error_inv1_cepot                      | 6                | 23             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/next_error_inv1_cepot1                     | 10               | 22             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/next_error_inv1_cepot2                     | 1                | 1              |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/sec_tick                                   | 4                | 14             |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_unit/msf_inst/state_FSM_FFd2                             | 1                | 1              |
+| clk_BUFGP    | ld_0_OBUF    |            | msf_w                                                        | 13               | 54             |
+| clk_BUFGP    | ld_0_OBUF    |            | serial_port_unit/_n0064_inv                                  | 4                | 8              |
+| clk_BUFGP    | ld_0_OBUF    |            | serial_port_unit/_n0069_inv                                  | 1                | 2              |
+| clk_BUFGP    | ld_0_OBUF    |            | transmitter_unit/transmitter_inst/_n0787_inv                 | 2                | 6              |
+| clk_BUFGP    | ld_0_OBUF    |            | transmitter_unit/transmitter_inst/state_FSM_FFd2-In11_cepot  | 41               | 126            |
+| clk_BUFGP    | ld_0_OBUF    |            | transmitter_unit/transmitter_inst/state_FSM_FFd2-In11_cepot1 | 26               | 78             |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<0>                                         | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<3>                                         | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<4>                                         | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<5>                                         | 1                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<10>                                        | 1                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>2                                       | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>3                                       | 3                | 10             |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>21                                      | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>22                                      | 3                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>31                                      | 2                | 5              |
+| clk_BUFGP    | ld_0_OBUF    |            | uptime_unit/cnt_c<12>311                                     | 3                | 5              |
++---------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                       |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| top_level/         |           | 25/1407       | 0/3330        | 38/4451       | 0/0           | 0/0       | 0/0     | 1/1   | 0/0   | 0/0   | 0/0   | 0/0       | top_level                                    |
+| +dcf_unit          |           | 0/145         | 0/236         | 0/429         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/dcf_unit                           |
+| ++dcf_inst         |           | 145/145       | 236/236       | 429/429       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/dcf_unit/dcf_inst                  |
+| +fifo_unit         |           | 0/802         | 0/2261        | 0/2915        | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/fifo_unit                          |
+| ++fifo_inst        |           | 802/802       | 2261/2261     | 2915/2915     | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/fifo_unit/fifo_inst                |
+| +msf_unit          |           | 0/175         | 0/288         | 0/534         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/msf_unit                           |
+| ++msf_inst         |           | 175/175       | 288/288       | 534/534       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/msf_unit/msf_inst                  |
+| +mux_uut           |           | 82/82         | 236/236       | 93/93         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/mux_uut                            |
+| +serial_port_unit  |           | 13/13         | 23/23         | 24/24         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/serial_port_unit                   |
+| +transmitter_unit  |           | 0/117         | 0/215         | 0/344         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/transmitter_unit                   |
+| ++transmitter_inst |           | 117/117       | 215/215       | 344/344       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/transmitter_unit/transmitter_inst  |
+| +trigger_unit      |           | 3/3           | 6/6           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/trigger_unit                       |
+| +uptime_unit       |           | 45/45         | 65/65         | 72/72         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | top_level/uptime_unit                        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

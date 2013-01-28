@@ -1,0 +1,32 @@
+0 	1 1 0 0 0 0 0 0    69941.30419 ms MSF L->H, SoS 3
+1 	1 1 0 0 0 0 0 0    69942.82219 ms DCF L->H, SoS 3
+1 	0 1 0 0 0 0 0 0    70060.07803 ms MSF H->L, a bit 0
+1 	1 1 0 0 0 0 0 0    70142.67110 ms MSF L->H, b bit 1
+0 	1 1 0 0 0 0 0 0    70145.73457 ms DCF H->L, 203 ms, bit 1, EoS 4
+0 	0 1 0 0 0 0 0 0    70257.51724 ms MSF H->L, EoS 4
+0 	1 1 0 0 0 0 0 0    70940.26792 ms MSF L->H, SoS 4
+1 	1 1 0 0 0 0 0 0    70941.94128 ms DCF L->H, SoS 4
+0	1 1 0 0 0 0 0 0    71048.03542 ms DCF H->L, 107ms, bit 0, EoS 5
+0 	0 1 0 0 0 0 0 0    71061.82246 ms MSF H->L, a bit 0
+0	1 1 0 0 0 0 0 0    71141.81822 ms MSF L->H, b bit 1
+0 	0 1 0 0 0 0 0 0    71258.31404 ms MSF H->L, EoS 5
+0 	1 1 0 0 0 0 0 0    71940.23906 ms MSF L->H, SoS 5
+1 	1 1 0 0 0 0 0 0    71941.89488 ms DCF L->H, SoS 5
+1	0 1 0 0 0 0 0 0    72059.92260 ms MSF H->L, a bit 0, b bit 0
+0 	0 1 0 0 0 0 0 0    72146.34308 ms DCF H->L, 205ms, bit 1, EoS 6 
+0 	1 1 0 0 0 0 0 0    72940.11459 ms MSF L->H, SoS 6
+1 	1 1 0 0 0 0 0 0    72943.39417 ms DCF L->H, SoS 6
+1 	0 1 0 0 0 0 0 0    73061.34278 ms MSF H->L, a bit 0, b bit 0
+0 	0 1 0 0 0 0 0 0    73146.24772 ms DCF H->L, 203 ms, bit 1
+0 	1 1 0 0 0 0 0 0    73940.69368 ms MSF L->H, SoS 7
+1 	1 1 0 0 0 0 0 0    73941.94540 ms DCF L->H, SoS 7
+1 	0 1 0 0 0 0 0 0    74059.80836 ms MSF H->L, a bit 0, b bit 0
+0 	0 1 0 0 0 0 0 0    74146.53175 ms DCF H->L, 205ms, bit 1
+0 	1 1 0 0 0 0 0 0    74940.46044 ms MSF L->H, SoS 8
+1 	1 1 0 0 0 0 0 0    74941.85033 ms DCF L->H, SoS 8
+0 	1 1 0 0 0 0 0 0    75047.71049 ms DCF H->L, 106ms, bit 0
+0 	0 1 0 0 0 0 0 0    75060.39866 ms MSF H->L, a bit 0, b bit 0
+0 	1 1 0 0 0 0 0 0    75940.90553 ms MSF L->H, SoS 9
+1 	1 1 0 0 0 0 0 0    75943.66477 ms DCF L->H, SoS 9
+0 	1 1 0 0 0 0 0 0    76048.21028 ms DCF H->L, 105ms, bit 0
+0 	0 1 0 0 0 0 0 0    76060.84714 ms MSF H->L, a bit 0, b bit 0

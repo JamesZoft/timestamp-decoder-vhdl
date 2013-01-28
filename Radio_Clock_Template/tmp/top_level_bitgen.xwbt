@@ -1,0 +1,8 @@
+INTSTYLE=silent
+INFILE=/users/r/reedj/mux_work_dsd/Radio_Clock_Template/top_level.ncd
+OUTFILE=/users/r/reedj/mux_work_dsd/Radio_Clock_Template/top_level.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/users/r/reedj/mux_work_dsd/Radio_Clock_Template
+LICENSE=ISE
+USER_INFO=174459675_174119114_208900116_664
